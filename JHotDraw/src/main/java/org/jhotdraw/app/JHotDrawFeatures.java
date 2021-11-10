@@ -32,6 +32,7 @@ public class JHotDrawFeatures {
     public static final String FIGURE_PALETTE = "figure palette";
     public static final String STROKE_PALETTE = "stroke palette";
     public static final String FONT_PALETTE = "font palette";
+    public static final String FONT_SIZE = "font size";
     public static final String LINK_PALETTE = "link palette";
     public static final String VIEW_PALETTE = "view palette";
     public static final String ALIGN_PALETTE = "align palette";
