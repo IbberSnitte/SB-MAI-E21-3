@@ -156,30 +156,7 @@ public class FontToolBar extends AbstractToolBar {
 
                 fontSizeWithSlider(gbc, p, p2, labels);
 
-                // Font style buttons
-                btn = ButtonFactory.createFontStyleBoldButton(editor, labels);
-                btn.setUI((PaletteButtonUI) PaletteButtonUI.createUI(btn));
-                btn.putClientProperty("Palette.Component.segmentPosition", "first");
-                gbc = new GridBagConstraints();
-                gbc.gridy = 2;
-                gbc.insets = new Insets(3, 0, 0, 0);
-                p.add(btn, gbc);
-                btn = ButtonFactory.createFontStyleItalicButton(editor, labels);
-                btn.setUI((PaletteButtonUI) PaletteButtonUI.createUI(btn));
-                btn.putClientProperty("Palette.Component.segmentPosition", "middle");
-                gbc = new GridBagConstraints();
-                gbc.gridy = 2;
-                gbc.insets = new Insets(3, 0, 0, 0);
-                p.add(btn, gbc);
-                btn = ButtonFactory.createFontStyleUnderlineButton(editor, labels);
-                btn.setUI((PaletteButtonUI) PaletteButtonUI.createUI(btn));
-                btn.putClientProperty("Palette.Component.segmentPosition", "last");
-                gbc = new GridBagConstraints();
-                gbc.gridy = 2;
-                gbc.insets = new Insets(3, 0, 0, 0);
-                gbc.anchor = GridBagConstraints.WEST;
-                p.add(btn, gbc);
-
+                fontStyleButtons(btn, labels, gbc, p);
             }
             break;
             case 2: {
@@ -229,30 +206,7 @@ public class FontToolBar extends AbstractToolBar {
 
                 fontSizeWithSlider(gbc, p, p2, labels);
 
-                // Font style buttons
-                btn = ButtonFactory.createFontStyleBoldButton(editor, labels);
-                btn.setUI((PaletteButtonUI) PaletteButtonUI.createUI(btn));
-                btn.putClientProperty("Palette.Component.segmentPosition", "first");
-                gbc = new GridBagConstraints();
-                gbc.gridy = 2;
-                gbc.insets = new Insets(3, 0, 0, 0);
-                p.add(btn, gbc);
-                btn = ButtonFactory.createFontStyleItalicButton(editor, labels);
-                btn.setUI((PaletteButtonUI) PaletteButtonUI.createUI(btn));
-                btn.putClientProperty("Palette.Component.segmentPosition", "middle");
-                gbc = new GridBagConstraints();
-                gbc.gridy = 2;
-                gbc.insets = new Insets(3, 0, 0, 0);
-                p.add(btn, gbc);
-                btn = ButtonFactory.createFontStyleUnderlineButton(editor, labels);
-                btn.setUI((PaletteButtonUI) PaletteButtonUI.createUI(btn));
-                btn.putClientProperty("Palette.Component.segmentPosition", "last");
-                gbc = new GridBagConstraints();
-                gbc.gridy = 2;
-                gbc.insets = new Insets(3, 0, 0, 0);
-                gbc.anchor = GridBagConstraints.WEST;
-                p.add(btn, gbc);
-
+                fontStyleButtons(btn, labels, gbc, p);
             }
             break;
         }
@@ -306,6 +260,32 @@ public class FontToolBar extends AbstractToolBar {
         gbc.anchor = GridBagConstraints.FIRST_LINE_START;
         gbc.insets = new Insets(0, 0, 0, 0);
         p.add(p2, gbc);
+    }
+
+    protected void fontStyleButtons(AbstractButton btn, ResourceBundleUtil labels, GridBagConstraints gbc, JPanel p) {
+        // Font style buttons
+        btn = ButtonFactory.createFontStyleBoldButton(editor, labels);
+        btn.setUI((PaletteButtonUI) PaletteButtonUI.createUI(btn));
+        btn.putClientProperty("Palette.Component.segmentPosition", "first");
+        gbc = new GridBagConstraints();
+        gbc.gridy = 2;
+        gbc.insets = new Insets(3, 0, 0, 0);
+        p.add(btn, gbc);
+        btn = ButtonFactory.createFontStyleItalicButton(editor, labels);
+        btn.setUI((PaletteButtonUI) PaletteButtonUI.createUI(btn));
+        btn.putClientProperty("Palette.Component.segmentPosition", "middle");
+        gbc = new GridBagConstraints();
+        gbc.gridy = 2;
+        gbc.insets = new Insets(3, 0, 0, 0);
+        p.add(btn, gbc);
+        btn = ButtonFactory.createFontStyleUnderlineButton(editor, labels);
+        btn.setUI((PaletteButtonUI) PaletteButtonUI.createUI(btn));
+        btn.putClientProperty("Palette.Component.segmentPosition", "last");
+        gbc = new GridBagConstraints();
+        gbc.gridy = 2;
+        gbc.insets = new Insets(3, 0, 0, 0);
+        gbc.anchor = GridBagConstraints.WEST;
+        p.add(btn, gbc);
     }
 
     @Override
