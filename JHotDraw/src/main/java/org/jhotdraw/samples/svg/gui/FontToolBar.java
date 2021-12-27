@@ -97,7 +97,6 @@ public class FontToolBar extends AbstractToolBar {
                         }
                     }
                     return false;
-
                 }
             };
         }
@@ -132,13 +131,10 @@ public class FontToolBar extends AbstractToolBar {
         //Moved out of Switch Statement alone
         btn = ButtonFactory.createFontButton(editor, labels);
         
-        // Font face field and popup button
         fontFaceField(state, gbc, p, labels, btn);
 
-        //Call of Font Size Method
         fontSizeWithSlider(gbc, p, p2, labels);
 
-        // Font style buttons
         fontStyleButtons(btn, labels, gbc, p);
 
         return p;
